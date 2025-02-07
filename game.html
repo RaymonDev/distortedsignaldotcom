@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="src/game/game.css">
+</head>
+<body>
+    <div id="tutorial-overlay">
+        <div id="tutorial-content">
+            <h2>Welcome!!</h2>
+            <div class="tutorial-step">
+                1. The top wave is your target pattern
+            </div>
+            <div class="tutorial-step">
+                2. Select a tool from the right panel:
+                - Frequency: adjusts wave density
+                - Amplitude: adjusts wave height
+                - Phase: shifts wave position
+            </div>
+            <div class="tutorial-step">
+                3. Click and drag up/down in the workspace to adjust the wave
+            </div>
+            <div class="tutorial-step">
+                4. Match the pattern to score points!
+            </div>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="victory-message">
+        <h2>Pattern Matched!</h2>
+        <div>Score: +<span id="points-earned">0</span></div>
+        <button id="continue-btn">Continue</button>
+    </div>
+
+    <div id="logo">DISTORTED SIGNAL</div>
+    <div id="score">Score: <span id="score-value">0</span></div>
+    
+    <div id="game-container">
+        <canvas id="target-wave"></canvas>
+        <canvas id="workspace"></canvas>
+        
+        <div id="tools">
+            <button class="tool-btn frequency">Frequency</button>
+            <button class="tool-btn amplitude">Amplitude</button>
+            <button class="tool-btn phase">Phase</button>
+        </div>
+
+        <div id="accuracy-meter">
+            <div id="accuracy-fill"></div>
+        </div>
+    </div>
+
+    <a href="https://github.com/RaymonDev" target="_blank" id="credits">
+        Made with <span class="heart">❤️</span> by RaymonDev
+    </a>
+
+    <script src="src/game/game.js"></script>
+</body>
+</html>

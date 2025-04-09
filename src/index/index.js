@@ -112,5 +112,5 @@ startNoiseSequence();
 
 //When the DISTORTED SIGNAL text is clicked, the page will load the game.html file
 document.querySelector('.text').addEventListener('click', () => {
-    window.location.href = 'game.html';
+    window.location.href = 'home.html';
 });

@@ -151,3 +151,85 @@ h1 {
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
+
+
+
+/* New neon surge animation */
+@keyframes neonSurge {
+    0%, 100% {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+        color: #0ff;
+    }
+    20% {
+        text-shadow: 0 0 8px #0ff, 0 0 15px #0ff, 0 0 25px #0ff;
+        color: #0ff;
+    }
+    40% {
+        text-shadow: 0 0 12px #0ff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px rgba(255, 255, 255, 0.5);
+        color: #fff; /* Brief white peak for intensity */
+    }
+    60% {
+        text-shadow: 0 0 8px #0ff, 0 0 15px #0ff, 0 0 25px #0ff;
+        color: #0ff;
+    }
+    80% {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px rgba(0, 255, 255, 0.8);
+        color: #0ff;
+    }
+}
+
+/* Update the highlight-card h2 */
+.highlight-card h2 {
+    color: #0ff;
+    animation: neonSurge 3.5s infinite ease-in-out; /* Smooth 3.5s cycle */
+}
+
+/* Keep the floatSway animation unchanged */
+@keyframes floatSway {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+        box-shadow: 0 5px 12px rgba(0, 255, 255, 0.6);
+    }
+    50% {
+        transform: translateY(-3px) rotate(0deg);
+        box-shadow: 0 3px 10px rgba(0, 255, 255, 0.5);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+        box-shadow: 0 5px 12px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+}
+
+.highlight-card {
+    background: #1a1a1a;
+    border: 1px solid #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: floatSway 6s infinite ease-in-out;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #0ff;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.7);
+    animation-play-state: paused;
+}
+
+/* Rest of the styles unchanged */
+.highlight-card .project-link {
+    background: #0ff;
+    color: #000;
+}
+
+.highlight-card .project-link:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}

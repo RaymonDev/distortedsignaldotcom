@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMEG - Modern Marvels for the Discriminating Homemaker!</title>
+    <style>
+        /* Ultra Retro 50s Design System */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab&family=Bebas+Neue&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: var(--buttercream);
+            color: #333;
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='4' fill='%23d2c7b8' fill-opacity='0.2'/%3E%3C/svg%3E");
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Authentic 50s Color Palette */
+        :root {
+            --turquoise: #00b2ca;
+            --salmon: #ff6b61;
+            --mint: #f5e6c6;
+            --buttercream: #fff4d6;
+            --formica-red: #ed1c24;
+            --retro-cream: #f5e6c6; /* Replaced atomic-green */
+            --jadeite: #aad6a0;
+            --gold: #d6ae01;
+            --pink: #ff9a8b;
+            --aqua: #63c5da;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.2; }
+        }
+
+        /* Classic Diner/Route 66-style Header */
+        .header {
+            background: linear-gradient(135deg, var(--formica-red), var(--salmon));
+            text-align: center;
+            padding: 0.5rem 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: var(--mint);
+            border: 6px solid var(--formica-red);
+            box-shadow: 0 0 0 2px #fff, 0 0 0 8px var(--gold);
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .brand-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            color: var(--formica-red);
+            letter-spacing: 10px;
+            text-shadow: 3px 3px 0 #000, 0 0 10px var(--gold);
+            margin: 0;
+            position: relative;
+        }
+        
+        .logo-text::before, .logo-text::after {
+            content: "★";
+            position: absolute;
+            font-size: 2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            animation: twinkle 2s infinite;
+        }
+        
+        .logo-text::before {
+            left: -50px;
+        }
+        
+        .logo-text::after {
+            right: -50px;
+        }
+        
+        .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #222;
+            text-shadow: 1px 1px 0 var(--gold);
+        }
+        
+        /* Authentic 50s Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            background: linear-gradient(to bottom, var(--turquoise), var(--aqua));
+            border-top: 4px solid var(--formica-red);
+            border-bottom: 4px solid var(--formica-red);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .nav-item {
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--gold);
+            border-radius: 5px;
+        }
+        
+        .nav-item:hover {
+            background-color: var(--gold);
+            color: var(--formica-red);
+            transform: scale(1.1);
+        }
+        
+        /* Diner-Style Hero Banner */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 3rem 1rem;
+            background: radial-gradient(circle, var(--aqua), var(--turquoise));
+            overflow: hidden;
+            border-bottom: 10px solid var(--gold);
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.2;
+            animation: twinkle 3s infinite;
+        }
+        
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            background-color: var(--mint);
+            padding: 2rem;
+            border: 8px solid var(--gold);
+            box-shadow: 0 0 0 4px var(--formica-red);
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            color: var(--formica-red);
+            text-shadow: 2px 2px 0 #000;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Retro-Style Buttons and CTA */
+        .retro-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--formica-red), var(--salmon));
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.75rem 2rem;
+            margin: 0.5rem;
+            border: 2px solid var(--gold);
+            border-radius: 5px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+        }
+        
+        .retro-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.8);
+            background: linear-gradient(45deg, var(--salmon), var(--formica-red));
+        }
+        
+        .retro-btn::after {
+            content: "";
+            position: absolute;
+            bottom: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.2);
+            transform: rotate(45deg);
+            transition: all 0.3s;
+        }
+        
+        .retro-btn:hover::after {
+            bottom: -20%;
+            right: -20%;
+        }
+        
+        /* Checkerboard Diner-like Section Divider */
+        .section-divider {
+            height: 20px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--formica-red) 0px,
+                var(--formica-red) 10px,
+                var(--gold) 10px,
+                var(--gold) 20px
+            );
+            margin: 2rem 0;
+        }
+        
+        /* Product Showcase with Authentic 50s Styling */
+        .product-section {
+            padding: 3rem 2rem;
+            position: relative;
+            background: linear-gradient(to bottom, var(--buttercream), var(--retro-cream));
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .product-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--formica-red);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 #000;
+            position: relative;
+            display: inline-block;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 5px;
+            background-color: var(--gold);
+            position: absolute;
+            bottom: -10px;
+            left: 10%;
+            border-radius: 5px;
+        }
+        
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: stretch; /* Add this line */
+        }
+        
+        .product-card {
+            width: 300px;
+            position: relative;
+            text-align: center;
+            background: var(--mint);
+            padding: 1rem;
+            border: 4px solid var(--formica-red);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1.2s ease-out;
+            display: flex;
+            flex-direction: column;
+            /* Remove height: 100%; */
+            flex: 1 1 300px; /* Allow cards to grow/shrink equally */
+            min-height: 520px; /* Optional: set a minimum height for consistency */
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .product-image-container {
+            position: relative;
+            height: 250px;
+            background-color: var(--buttercream);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: 4px solid var(--gold);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.5);
+        }
+        
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        .product-starburst {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, var(--gold), var(--salmon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--formica-red);
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transform: rotate(不动);
+            border-radius: 50%;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+            z-index: 1;
+            padding: 0.5rem;
+        }
+        
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--formica-red);
+            text-shadow: 1px 1px 0 #000;
+        }
+        
+        .product-slogan {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #222;
+        }
+        
+        .product-description {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            flex-grow: 1; /* Pushes price/button to the bottom */
+        }
+        
+        .product-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--formica-red);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            margin-top: auto; /* Pushes price/button to the bottom */
+        }
+        
+        /* Homemaker Testimonials Section */
+        .testimonials {
+            padding: 3rem 2rem;
+            background: radial-gradient(circle, var(--mint), var(--jadeite));
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            animation: twinkle 4s infinite;
+        }
+        
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            animation: fadeInUp 1.4s ease-out;
+        }
+        
+        .testimonial-card {
+            background: var(--buttercream);
+            padding: 3rem 2rem 2rem;
+            border: 5px solid var(--gold);
+            position: relative;
+            margin-top: 50px;
+            text-align: left;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .Homemaker-image {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+            box-shadow: 0 0 0 5px var(--formica-red);
+            background-color: var(--mint);
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            line-height: 1.8;
+            color: #222;
+        }
+        
+        .testimonial-text::before, .testimonial-text::after {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            position: absolute;
+            opacity: 0.3;
+            line-height: 1;
+            color: var(--formica-red);
+        }
+        
+        .testimonial-text::before {
+            content: "\"";
+            top: -20px;
+            left: -15px;
+        }
+        
+        .testimonial-text::after {
+            content: "\"";
+            bottom: -40px;
+            right: -15px;
+        }
+        
+        .testimonial-author {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            color: var(--formica-red);
+        }
+        
+        .testimonial-location {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-nav-btn {
+            background-color: transparent;
+            border: 2px solid var(--formica-red);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-nav-btn.active {
+            background-color: var(--formica-red);
+            transform: scale(1.2);
+        }
+        
+        /* Features Section with 50s Styling */
+        .features {
+            padding: 3rem 2rem;
+            background: linear-gradient(to bottom, var(--aqua), var(--turquoise));
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .feature {
+            width: 300px;
+            text-align: center;
+            background: var(--mint);
+            padding: 1.5rem;
+            border: 3px solid var(--formica-red);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1.6s ease-out;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--formica-red), var(--salmon));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .feature-icon::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            border: 3px dashed var(--gold);
+            opacity: 0.6;
+        }
+        
+        .feature-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--formica-red);
+            text-shadow: 1px 1px 0 #000;
+        }
+        
+        .feature-description {
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* Homemaker Tips Banner */
+        .Homemaker-tips {
+            background: radial-gradient(circle, var(--jadeite), var(--mint));
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .Homemaker-tips::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .tips-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--buttercream);
+            padding: 2rem;
+            border: 4px solid var(--formica-red);
+            border-radius: 10px;
+            position: relative;
+            animation: fadeInUp 1.8s ease-out;
+        }
+        
+        .tips-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: var(--formica-red);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            text-shadow: 1px 1px 0 #000;
+        }
+        
+        .tips-title::before, .tips-title::after {
+            content: "✿";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+        
+        .tips-title::before {
+            left: -40px;
+        }
+        
+        .tips-title::after {
+            right: -40px;
+        }
+        
+        .tips-list {
+            text-align: left;
+            list-style-position: inside;
+            list-style-type: none;
+        }
+        
+        .tips-item {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        .tips-item::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--formica-red);
+            font-size: 1.2rem;
+        }
+        
+        /* Retro 50s CTA Banner */
+        .cta-banner {
+            background: linear-gradient(45deg, var(--formica-red), var(--salmon));
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--mint);
+            padding: 2.5rem;
+            border: 6px solid var(--gold);
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 2s ease-out;
+        }
+        
+        .cta-container::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            border: 2px dashed var(--formica-red);
+            pointer-events: none;
+        }
+        
+        .cta-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--formica-red);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 0 #000;
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            color: #222;
+        }
+        
+        /* Authentic 50s Footer */
+        .footer {
+            background: linear-gradient(to bottom, #333, #222);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+        }
+        
+        .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            color: var(--mint);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0 0.5rem;
+        }
+        
+        .footer-link::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--formica-red);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .footer-link:hover {
+            color: var(--formica-red);
+        }
+        
+        .footer-copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gold);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: var(--mint);
+        }
+        
+        /* Responsive Breakpoints with 50s TV-style transitions */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .product-container {
+                gap: 1.5rem;
+            }
+            
+            .features-container {
+                gap: 1.5rem;
+            }
+            
+            .logo-text {
+                font-size: 3.5rem;
+            }
+            
+            .logo-text::before, .logo-text::after {
+                font-size: 1.8rem;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 0;
+            }
+            
+            .product-card, .feature {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Classic 50s Diner-Style Logo -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="brand-logo">
+                <h1 class="logo-text">SMEG</h1>
+            </div>
+            <p class="tagline">The Modern Marvel for Today's Home!</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="#products" class="nav-item">Our Appliances</a>
+        <a href="#features" class="nav-item">Special Features</a>
+        <a href="#testimonials" class="nav-item">Happy Customers</a>
+        <a href="#contact" class="nav-item">Visit Our Showroom</a>
+    </nav>
+    
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-container">
+            <h2 class="hero-title">Enter the Kitchen of Tomorrow, Today!</h2>
+            <p class="hero-subtitle">SMEG - the appliances that bring elegance and efficiency to your home</p>
+            <p class="hero-description">Our marvelous time-saving devices will transform your daily kitchen tasks into a delightful experience! With SMEG, you're not just buying appliances—you're investing in a lifestyle of elegance, efficiency, and joy. See why smart homeowners everywhere are choosing SMEG to enhance their kitchens and impress their guests.</p>
+            <a href="#products" class="retro-btn">See Our Fabulous Collection!</a>
+        </div>
+    </section>
+    
+    <!-- Checkerboard Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Product Showcase -->
+    <section class="product-section" id="products">
+        <h2 class="section-title">Gleaming Household Marvels</h2>
+        <p class="section-subtitle">Each SMEG appliance is thoughtfully designed to bring joy and ease to your daily kitchen tasks</p>
+        
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/src/smeg_retro/refrigerator.jpg" alt="SMEG FAB28 Refrigerator" class="product-image">
+                    <div class="product-starburst">Limited Quantity!</div>
+                </div>
+                <h3 class="product-name">FAB28 Retro-Style Refrigerator</h3>
+                <p class="product-slogan">A Splash of Color for Your Kitchen!</p>
+                <p class="product-description">This stunning refrigerator combines cutting-edge cooling technology with the timeless appeal of 1950s design. Available in turquoise, salmon, mint, and more, it’s the centerpiece of any modern kitchen.</p>
+                <p class="product-price">$1,999.99</p>
+                <a href="#contact" class="retro-btn">Order Now!</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/src/smeg_retro/mixer.jpg" alt="SMEG Stand Mixer" class="product-image">
+                    <div class="product-starburst">New Arrival!</div>
+                </div>
+                <h3 class="product-name">SMEG Stand Mixer</h3>
+                <p class="product-slogan">Whip Up Wonders with Ease!</p>
+                <p class="product-description">Bake like a pro with our retro-inspired stand mixer. With multiple speed settings and a range of attachments, it’s perfect for cakes, cookies, and more.</p>
+                <p class="product-price">$459.99</p>
+                <a href="#contact" class="retro-btn">Order Now!</a>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/src/smeg_retro/toaster.jpg" alt="SMEG 2-Slice Toaster" class="product-image">
+                    <div class="product-starburst">Hot Deal!</div>
+                </div>
+                <h3 class="product-name">2-Slice Toaster</h3>
+                <p class="product-slogan">Toast to the Good Life!</p>
+                <p class="product-description">Start your day with perfectly toasted bread, bagels, or waffles. This toaster’s retro curves and vibrant finish make it a stylish addition to your kitchen.</p>
+                <p class="product-price">$149.99</p>
+                <a href="#contact" class="retro-btn">Order Now!</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Checkerboard Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Homemaker Tips Banner -->
+    <section class="Homemaker-tips">
+        <div class="tips-container">
+            <h2 class="tips-title">Handy Kitchen Tips</h2>
+            <ul class="tips-list">
+                <li class="tips-item">Keep your SMEG refrigerator sparkling with a vinegar solution—shine like the stars!</li>
+                <li class="tips-item">Organize your fridge shelves by meal type to make dinner prep a snap.</li>
+                <li class="tips-item">Use your SMEG mixer’s dough hook for homemade bread—your loved ones will rave!</li>
+                <li class="tips-item">Polish your toaster to maintain its retro shine on your countertop.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Happy Customers Say</h2>
+        <p class="section-subtitle">Hear from delighted customers who’ve transformed their kitchens with SMEG!</p>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <img src="/src/smeg_retro/betty.jpg" alt="Customer Betty" class="Homemaker-image">
+                <p class="testimonial-text">"My SMEG refrigerator is the talk of the neighborhood! It’s so chic and keeps my groceries fresher than ever."</p>
+                <p class="testimonial-author">Betty Johnson</p>
+                <p class="testimonial-location">Chicago, IL</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <img src="/src/smeg_retro/doris.jpg" alt="Customer Doris" class="Homemaker-image">
+                <p class="testimonial-text">"The SMEG mixer makes baking a joy! My cakes have never been fluffier, and it looks darling on my counter."</p>
+                <p class="testimonial-author">Doris Miller</p>
+                <p class="testimonial-location">Pasadena, CA</p>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="testimonial-nav-btn active"></button>
+                <button class="testimonial-nav-btn"></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Checkerboard Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose SMEG?</h2>
+        <p class="section-subtitle">Discover the retro-style advantages of our marvelous appliances!</p>
+        
+        <div class="features-container">
+            <div class="feature">
+                <div class="feature-icon">★</div>
+                <h3 class="feature-title">Iconic Design</h3>
+                <p class="feature-description">Our appliances boast retro curves and vibrant colors, bringing 1950s charm to your modern kitchen.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚙️</div>
+                <h3 class="feature-title">Advanced Technology</h3>
+                <p class="feature-description">Engineered for efficiency, SMEG appliances offer cutting-edge features to simplify your daily tasks.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💖</div>
+                <h3 class="feature-title">Built to Last</h3>
+                <p class="feature-description">Crafted with quality materials, our products are designed to delight for years to come.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Checkerboard Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Retro CTA Banner -->
+    <section class="cta-banner" id="contact">
+        <div class="cta-container">
+            <h2 class="cta-title">Visit Our Showroom Today!</h2>
+            <p class="cta-text">Step into the future of kitchen design! Visit your local SMEG showroom to experience our appliances in person. Your dream kitchen awaits!</p>
+            <a href="#contact" class="retro-btn">Find a Showroom Near You!</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-logo">SMEG</h2>
+            <p class="footer-tagline">Modern Marvels for the Discerning Homeowner</p>
+            <div class="footer-links">
+                <a href="#products" class="footer-link">Our Appliances</a>
+                <a href="#features" class="footer-link">Special Features</a>
+                <a href="#testimonials" class="footer-link">Happy Customers</a>
+                <a href="#contact" class="footer-link">Contact Us</a>
+            </div>
+            <p class="footer-copyright">© 2025 SMEG. All Rights Reserved. This site is not affiliated with SMEG in any way. Made with ❤️ by <a href="https://distortedsignal.com">DistortedSignal</a> </p>
+        </div>
+    </footer>
+</body>
+</html>

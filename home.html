@@ -1,119 +1,128 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQK4PW8XK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-PGQK4PW8XK');
     </script>
 
-
     <link rel="stylesheet" href="src/home/home.css">
-    <link rel="stylesheet" href="src/home/home_retro_card.css">
-    <title>Distorted Signal | RaymonDev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Press+Start+2P&family=Allura&family=Righteous&family=Poiret+One&family=Fredoka+One&family=IBM+Plex+Mono:wght@700&family=Satisfy&family=Staatliches&family=Great+Vibes&family=Abril+Fatface&family=League+Script&family=Anton&family=Pacifico&family=Oswald:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Distorted Signal</title>
 </head>
 
 <body>
-    <div id="logo">DISTORTED SIGNAL</div>
+    <div class="cursor-follower"></div>
+    <div class="noise-overlay"></div>
+    
+    <nav class="nav-header">
+        <div class="nav-logo">DS</div>
+        <a href="https://github.com/RaymonDev" target="_blank" class="nav-link">GitHub</a>
+    </nav>
 
-    <div class="container">
-        <h1>Welcome to Distorted Signal</h1>
-        <p class="subtitle">Open source projects by <a href="https://github.com/RaymonDev" target="_blank">RaymonDev</a>
-        </p>
-
-        <div class="project-grid">
-
-            <!-- Personal website -->
-            <div class="project-card highlight-card">
-                <h2>RaymonDev Portfolio</h2>
-                <p>Personal website</p>
-                <a href="https://raymondev.github.io/raymondevdotcom/" target="_blank" class="project-link">Visit
-                    website</a>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="Projects">Projects</h1>
+            <p class="hero-subtitle" data-text="Warranty voided">Warranty voided</p>
+            <div class="scroll-indicator">
+                <span class="scroll-text">↓</span>
             </div>
-
-            <!-- The game -->
-            <div class="project-card">
-                <h2>DistortedSignal - The Game</h2>
-                <p>An engaging web game where you match wave patterns by adjusting amplitude, frequency, and phase to
-                    achieve perfect alignment.</p>
-                <a href="game.html" target="_blank" class="project-link">Play Game</a>
-            </div>
-
-            <!-- Network traceroute-->
-            <div class="project-card">
-                <h2>Network Traceroute Visualization</h2>
-                <p>A Python tool that creates an interactive visualization of network paths using traceroute data.</p>
-                <a href="https://github.com/RaymonDev/traceroutemap" target="_blank" class="project-link">View on
-                    GitHub</a>
-            </div>
-
-            <!-- Snippets Vault -->
-            <div class="project-card">
-                <h2>Snippets Vault</h2>
-                <p>Your go-to collection of code snippets in various programming languages for quick reference and
-                    learning. </p>
-                <a href="https://github.com/RaymonDev/SnippetsVault" target="_blank" class="project-link">View on
-                    GitHub</a>
-            </div>
-
-            <!-- Wifi Network Scanner -->
-            <div class="project-card">
-                <h2>Wifi Network Scanner</h2>
-                <p>A Python-based tool for scanning, analyzing, and visualizing WiFi networks in your vicinity.</p>
-                <a href="https://github.com/RaymonDev/wifi-network-scanner" target="_blank" class="project-link">View on
-                    GitHub</a>
-            </div>
-
-            <!-- PyReqs -->
-            <div class="project-card">
-                <h2>PyReqs</h2>
-                <p>PyReqs automatically generates a requirements.txt file by scanning your Python project for
-                    dependencies. </p>
-                <a href="https://github.com/RaymonDev/pyreqs" target="_blank" class="project-link">View on GitHub</a>
-            </div>
-
-            <!-- ChessBot -->
-            <div class="project-card">
-                <h2>ChessBot</h2>
-                <p>Automated chess player that uses Selenium and StockFish to play chess against others on chess.com.
-                </p>
-                <a href="https://github.com/RaymonDev/ChessBot" target="_blank" class="project-link">View on GitHub</a>
-            </div>
-
-            <!-- 21 Guesses -->
-            <div class="project-card highlight-card">
-                <h2>21 Guesses</h2>
-                <p>Each day, guess a word from the Twenty One Pilots universe—think nouns, lyrics, and themes from their
-                    songs. You’ve got 6 tries to get it!</p>
-                <a href="https://21guesses.com/" target="_blank" class="project-link">Visit website</a>
-            </div>
-
-            <!-- SMEG Website -->
-            <div class="project-card retro-card">
-                <div class="product-starburst">New!</div>
-                <h2 class="product-name">SMEG Website</h2>
-                <p class="product-slogan">Retro-inspired web design</p>
-                <p class="product-description">A vibrant, 50s-inspired website showcasing SMEG's iconic retro appliances
-                    with a modern twist.</p>
-                <a href="smeg_retro.html" target="_blank" class="retro-btn">Visit Website</a>
-            </div>
-
-
         </div>
-    </div>
+    </section>
 
-    <a href="https://github.com/RaymonDev" target="_blank" id="credits">
-        Made with <span class="heart">❤️</span> by RaymonDev
-    </a>
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
 
-    <script src="src/game/game.js"></script>
+                <a href="https://raymondev.github.io/raymondevdotcom/" target="_blank" class="project-card" data-color="#00ffff">
+                    <span class="project-number">01</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio</h3>
+                        <p class="project-meta">Personal</p>
+                    </div>
+                </a>
+
+                <a href="game.html" target="_blank" class="project-card" data-color="#ff00ff">
+                    <span class="project-number">02</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Wave Matcher</h3>
+                        <p class="project-meta">Interactive game</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RaymonDev/traceroutemap" target="_blank" class="project-card" data-color="#00ff88">
+                    <span class="project-number">03</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Network Viz</h3>
+                        <p class="project-meta">Data visualization</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RaymonDev/SnippetsVault" target="_blank" class="project-card" data-color="#ffff00">
+                    <span class="project-number">04</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Snippets</h3>
+                        <p class="project-meta">Code archive</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RaymonDev/wifi-network-scanner" target="_blank" class="project-card" data-color="#ff0088">
+                    <span class="project-number">05</span>
+                    <div class="project-content">
+                        <h3 class="project-title">WiFi Scanner</h3>
+                        <p class="project-meta">Network tool</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RaymonDev/pyreqs" target="_blank" class="project-card" data-color="#8800ff">
+                    <span class="project-number">06</span>
+                    <div class="project-content">
+                        <h3 class="project-title">PyReqs</h3>
+                        <p class="project-meta">Python utility</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RaymonDev/ChessBot" target="_blank" class="project-card" data-color="#00ffff">
+                    <span class="project-number">07</span>
+                    <div class="project-content">
+                        <h3 class="project-title">ChessBot</h3>
+                        <p class="project-meta">AI automation</p>
+                    </div>
+                </a>
+
+                <a href="https://21guesses.com/" target="_blank" class="project-card" data-color="#ff00ff">
+                    <span class="project-number">08</span>
+                    <div class="project-content">
+                        <h3 class="project-title">21 Guesses</h3>
+                        <p class="project-meta">Word game</p>
+                    </div>
+                </a>
+
+                <a href="smeg_retro.html" target="_blank" class="project-card" data-color="#ff6600">
+                    <span class="project-number">09</span>
+                    <div class="project-content">
+                        <h3 class="project-title">SMEG</h3>
+                        <p class="project-meta">Retro design</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text"><a href="https://github.com/RaymonDev" target="_blank" class="footer-link">RaymonDev</a> × 2025</p>
+    </footer>
+
+    <script src="src/home/home.js"></script>
 </body>
 
 </html>
